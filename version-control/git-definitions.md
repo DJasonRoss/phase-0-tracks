@@ -27,3 +27,5 @@ of what was added when.
 * What is a merge conflict?
  This conflict occurs when seperate branches have changed identical
  portions of the same file and then attemped to merge. 
+
+change change change
