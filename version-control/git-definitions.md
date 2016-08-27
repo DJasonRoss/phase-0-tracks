@@ -28,4 +28,4 @@ of what was added when.
  This conflict occurs when seperate branches have changed identical
  portions of the same file and then attemped to merge. 
 
-change change change
+change change
