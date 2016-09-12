@@ -9,9 +9,9 @@ cite {
   margin-top: 10px;
 }
 
-#external-links ul {
-  list-style-type: none;
-  padding-left: 0px;
+#external-links {
+width: 20%;
+float: left;
 }
 
 /* you're welcome to edit the
@@ -30,3 +30,33 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+body {
+  max-width: 960px;
+  min-width: 460px;
+}
+
+main {
+  width: 756px;
+  float: right;
+}
+
+@media screen and (min-width: 960px) {
+ body {
+   padding: 10px;
+   margin: auto;
+ }
+}
+
+@media screen and (max-width: 850px) {
+ main h1 {
+   font-size: 25px;
+ }
+}
+
+@media screen and (max-width: 500px) {
+ #external-links {
+   display: block;
+   width: 100%;
+   text-align: center;
+ }
