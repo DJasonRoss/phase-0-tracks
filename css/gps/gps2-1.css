@@ -1,3 +1,71 @@
+body {
+  font-family: helvetica;
+  background-image: url(http://www.easyfreepatterns.com/patterns/0/500-internal-server-error-925.jpg);
+}
+
+
+.column-1 {
+  width: 49%;
+  float: left;
+  background-image: url(http://www.designbolts.com/wp-content/uploads/2012/12/Skin-Side-Up-White-Seamless-Texutre-For-Website-Background.jpg);
+  border-radius: 25px;
+  border: 2px solid #1c2f2f;
+  padding-bottom: 72px;
+    
+    
+    
+}
+
+.column-2 {
+  width: 49%;
+  float: right;
+  background-image: url(http://www.designbolts.com/wp-content/uploads/2012/12/Skin-Side-Up-White-Seamless-Texutre-For-Website-Background.jpg);
+  border-radius: 25px;
+  border: 2px solid #1c2f2f;
+}
+
+footer {
+  text-align: center;
+  clear: both;
+  background-color: white;
+}
+
+header {
+  border-radius: 25px;
+  text-align: center;
+  background-image: url(http://www.designbolts.com/wp-content/uploads/2012/12/Skin-Side-Up-White-Seamless-Texutre-For-Website-Background.jpg);
+  border: 2px solid #1c2f2f;
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', Georgia, Times, serif;
+}
+p, div {
+    font-family: 'Tahoma', Helvetica, Arial, sans-serif;
+    
+}
+
 h1 {
-	font-size: 54px;
+	font-size: 55px;
+	text-shadow: 7px 7px 7px #939393;
+	color: #2F4F4F;
+
+}
+
+h2 {
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 7px 7px 7px #939393;
+	color: #2F4F4F;
+}
+
+p {
+margin-left: 20px;
+}
+
+code {
+	font-weight: bold;
+	margin-left: 40px;
+	background-color: #ededed;
 }
