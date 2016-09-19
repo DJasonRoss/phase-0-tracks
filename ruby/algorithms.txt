@@ -1,0 +1,55 @@
+Elevator Instructions
+
+if going up press up button
+if going down press down button
+	else press button
+
+when doors open enter elevator
+
+locate floor list 
+	
+	if desired floor value = off
+	then press desired floor
+	else do nothing
+
+if "somebody coming" = true
+	then press Door Open
+	else do nothing
+
+
+wait for desired floor
+	then exit elevator
+
+
+
+
+
+
+
+
+How To Buy An OBEY Poster
+
+Is it 9:58AM PST on a Friday?
+	if no, wait until 9:58AM PST on a Friday
+	
+Do you have an OBEY account?
+	if no, make account.
+	else, log into account.	
+
+Navigate to PRINTS page.
+	if the print you want is posted, then buy print.
+	else F5 repeatedly until desired print appears.
+
+Add desired print to cart.
+
+Proceed to checkout.
+	if using PayPal, eneter login info
+	else, don't even bother, it will be sold out by the time you hand type all your info.
+
+Did the OBEY website crash and return an error?
+	if yes, click back and try again
+	if no, you're probably lying but proceed to submit your order
+
+Wait for email confirmation.
+	If email recieved, you're good to go.
+	If no email recieved contact OBEY ASAP.	
