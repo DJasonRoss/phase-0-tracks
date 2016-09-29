@@ -28,7 +28,12 @@ flat_file = {
 
 
 p flat_file
-p ""
-p flat_file[:mondo][:jay_ryan]
-p ""
-p flat_file[obey][2]
+puts ""
+p flat_file[:drawer_1][:mondo][:jay_ryan]
+puts ""
+p flat_file[:drawer_1][:obey][:obey_01]
+puts ""
+flat_file[:drawer_3].push("giveaways", "scratch_and_dent")
+p flat_file[:drawer_3]
+puts ""
+p flat_file[:drawer_3].reverse
