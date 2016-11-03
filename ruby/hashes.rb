@@ -1,87 +1,40 @@
-## Using hash in a program. ##
+#Interior Decor
 
-## Here we will establish the information to be collected. ##
-## After the value is gathered we will store it in the hash. ##
+#need users name, age, kids and decor theme.
 
+puts "Please enter client's name:"
+client_name = gets.chomp
+puts "Please eneter client's age:"
+client_age = gets.chomp.to_i 
+puts "Please enter number of client children:"
+client_kids = gets.chomp.to_i
+puts "What is the client's decor theme?"
+decor_theme = gets.chomp
 
-client_database = {}
+#Now I need to organize all this info into a hash.
+my_clients = {}
 
-puts "Enter name of client:"
-name = gets.chomp
-client_database[:name] = name
-
-puts "Enter Client's Age:"
-age = gets.chomp.to_i
-client_database[:age] = age
-
-puts "What is the client's decor preference?"
-decor = gets.chomp
-client_database[:decor] = decor
-
-puts "Does the client have children?"
-children = gets.chomp
-if children == "yes"
-	puts "How many children does the client have?"
-	number_offspring = gets.chomp.to_i
-if children == "no" 
-	number_offspring = "0"
-	end
-
-end
-
-client_database[:children] = number_offspring
-
-puts "Is the client a return customer?"
-return_customer = gets.chomp
-	if return_customer == "yes"
-		then return_customer = true
-	if return_customer == "no"
-		then return_customer = false
-	end
-end
-
-client_database[:return_customer] = return_customer
-
-## Once we have collected the information we will ##
-## ask if the user would like to make changes.  If so, ##
-## we will get new values and update the keys. ##
-
-puts "Would you like to update any information? type `no` to skip"
-info_update = gets.chomp
-
-## If the user does not wish to update, we will simply ##
-## print the information supplied. ##
-
-if info_update =="no"
-	puts client_database
-
-## If the user would like to make changes, we will ##
-## get the new information and apply changes here. ##
-
-else
+my_clients[:name] = client_name
+my_clients[:age] = client_age
+my_clients[:kids] = client_kids
+my_clients[:theme] = decor_theme
 
 
-	puts "What would you like to update?"
-	key_update = gets.chomp
-	puts "What would you like to change that to?"
-	value_update = gets.chomp
-		if key_update == "age"
-			client_database[key_update.to_sym] = value_update.to_i
-		elsif key_update == "children"
-			else
-				if value_update == "true"
-			 		value_update = true
-			 		client_database[key_update.to_sym] = value_update
-				elsif value_update == "false"
-					value_update = false
-					client_database[key_update.to_sym] = value_update
-				else
-					client_database[key_update.to_sym] = value_update
-				end
-			end
+#Give the user the opportunity to update a key (no need to loop, once is fine). After all, sometimes users make mistakes! If the designer says "none", skip it. But if the designer enters "decor_theme" (for example), your program should ask for a new value and update the :decor_theme key. (Hint: Strings have methods that will turn them into symbols, which would be quite handy here.) You can assume the user will correctly input a key that exists in your hash -- no need to handle user errors.
 
-## This will now print the updated info for the user. ##
-			
-			puts client_database
-end
 
+
+
+
+puts "Would you like to update any of this information?"
+update_query = gets.chomp
+	if update_query =="no"
+		puts my_clients
+	else update_query == "yes"
+		puts "Which value would you like to change? Name, Age, Kids or Theme?"
+		new_key = gets.chomp.to_sym
+		puts "Please eneter new value:"
+		new_value = gets.chomp 
+		my_clients[new_key] = new_value
+	end 
+p my_clients
