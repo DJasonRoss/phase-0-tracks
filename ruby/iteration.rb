@@ -1,52 +1,58 @@
-## Writing a method that takes a block. ##
+#Here is my Array of HBO shows.
 
-def poster_collection
-	puts "Banksy, Obey, Mr. Brainwash"
-	yield ("Stout", "Moss")
-end
+hbo_shows = ["Game Of Thrones", "Westworld", "Veep", "John Oliver"]
 
-poster_collection{|artist1, artist2| puts "Also #{name1} and #{name2}" }
+#Here is my Hash of AMC shows and their status.
 
-
-## Release 1. ##
-
-
-## Here is an array of 3 virtual drawers of a flat file. ##
-#flat_file = [drawer_1, drawer_2, drawer_3]
-
-
-## Here is a virtual hash of 3 prints. ##
-screen_prints = {
-	banksy: "Pulp Fiction",
-	obey: "They Live",
-	mbw:  "Going To NY"
-
+amc_shows = {
+	breaking_bad: 'unwatched',
+	walking_dead: 'unwatched',
+	better_call_saul: 'unwatched',
+	preacher: 'unwatched'
 }
 
+#Here I am iterating through the array using .each
 
-## This code will iterate through the array of drawers. ##
-#flat_file.each do |art|
-#	puts art
-#end
+hbo_shows.each do |show|
+	puts "I have watched the latest episode of #{show}"
+end 
 
+#Here I am using .map to modify items in the hash.
+puts "Original hash:"
+p hbo_shows
 
-## This code will iterate through the hash of prints. ##
-#screen_prints.each do |artist, printname|
-#end
+hbo_shows.map! do |show|
+	show.upcase
+end
 
-
-## This code will iterate using the .map! function on an array. ##
-#puts "Original Information"
-#p flat_file
-#flat_file.map! do |drawers|
-#	 drawers.upcase
-#end
-
-#puts "Modified Information"
-#p flat_file
+puts "Modifed hash using .map:"
+p hbo_shows
 
 
-## End of Release 1. ##
+
+
+
+#Here I am iterating through the hash using .each
+puts "Original hash:"
+p amc_shows
+
+amc_shows.each do |title, status|
+	puts "The AMC show #{title} is currently #{status}"
+end
+
+p amc_shows
+
+#Trying to modify ONLY the value, but can't seem to get it.
+
+amc_shows_modified = {}
+amc_shows_modified = amc_shows.map do |title, status|
+	title = title
+	status = "watched"
+end
+
+p amc_shows_modified
+
+
 
 mj_plants = {
 	'OG Kush' => 'veg',
@@ -61,10 +67,8 @@ numbers = [1, 2, 3, 4, 5]
 
 
 
-## A method that iterates through the items, deleting
-## any that meet a certain condition (for example, deleting
-## any numbers that are less than 5).
 
+# #A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
 
 mj_plants.delete_if {|plant_name, status| status == "flower"}
 p mj_plants
@@ -75,7 +79,12 @@ p mj_plants
 numbers.delete_if {|x| x >= 3}
 p numbers
 
-## A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
+
+
+
+# A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
+
+
 
 ## Hash Version. ##
 mj_plants.keep_if {|plant_name, status| plant_name == 'OG Kush'}
@@ -86,7 +95,11 @@ p mj_plants
 numbers.keep_if {|x| x == 1}
 p numbers
 
-## A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+
+
+
+# A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+
 
 ## Hash Version. ##
 
@@ -104,8 +117,9 @@ numbers = [1, 2, 3, 4, 5]
 p numbers.select {|x| x ==2}
 
 
-## A method that will remove items from a data structure until the condition in the block evaluates to false, 
-## then stops (you may not find a perfectly working option for the hash, and that's okay).
+
+# A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay).
+
 
 ## Array Version. ##
 numbers = [1, 2, 3, 4, 5]
@@ -127,16 +141,4 @@ p mj_plants
 mj_plants = mj_plants.drop_while {|plant_name, status| plant_name.length > 9}
 
 p mj_plants
-
-## Tried a few things, can't get this proper. ##
-
-
-
-
-
-
-
-
-
-
 
