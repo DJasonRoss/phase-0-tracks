@@ -83,5 +83,5 @@ before_name = gets.chomp.downcase.split(' ')
 # end
 
 
-#interface incomplete / loop incomplete / stored names incomplete
+
 
