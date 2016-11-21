@@ -10,7 +10,7 @@ require_relative 'state_data'
 
 class VirusPredictor
   
-  attr_reader :predicted_deaths
+ 
 # gives instance initial attributes
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
