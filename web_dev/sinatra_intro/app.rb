@@ -37,6 +37,23 @@ get '/students' do
   response
 end
 
+# A /contact route that displays an address (you can make up the address).
+
+get '/contact' do
+  "123 Fake Street Springfield, USA"
+end
+
+
+# A /great_job route that can take a person's name as a query parameter (not a route parameter) and say "Good job, [person's name]!". If the query parameter is not present, the route simply says "Good job!"
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
 # write a GET route that retrieves
 # a particular student
 
@@ -44,3 +61,17 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+
+#A route that uses route parameters to add two numbers and respond with the result. The data types are tricky here -- when will the data need to be (or arrive as) a string?
+
+get '/add/:a/:b' do
+  a = params[:a]
+  b = params[:b]
+  a = a.to_i
+  b = b.to_i
+  sum = a + b
+  sum.to_s
+  "The sum is #{sum}."
+end
+
